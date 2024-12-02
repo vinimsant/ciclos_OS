@@ -26,7 +26,7 @@
         <nav>
             <a href="">Clientes</a>
             <a href="">Objetos</a>
-            <a href="">Usuarios</a>
+            <a href="usuario_crud.php">Usuarios</a>
             <!-- botão sair  -->
             <a href="sair.php" id="btn_sair">Sair</a>
         </nav>
