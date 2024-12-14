@@ -1,4 +1,18 @@
 <?php
+    
+    //verificar se está logado
+    if(!isset($_SESSION)){
+        session_start();
+    }
+    if(!isset($_SESSION['nome'])){
+        //matar a pagina
+        die(header("Location: login.php"));
+    }
+    //nome do usuario logado
+    echo "<p class='menu_login'>Usuario logado <strong>{$_SESSION['nome']}</strong></p>";
+    
+    
+
 
     include("DAO_usuario.php");
     
@@ -12,7 +26,7 @@
         try{
             $dao = new DAO_Usuario();
             $dao->Inserir_usuario($usuario_crud);
-            header("Location: home.php");
+            header("Location: usuario_manager.php");
         }catch(Exception $e){
             echo "Erro ao salvar usuario $e";
         }
@@ -33,17 +47,20 @@
 </head>
 <body>
     <h2>Cadastrar Usuario</h2>
-    <form action="" method="post" class="form">
+    <form action="" method="post" class="formulario">
         <label for="nome">Nome</label>
         <input type="text" id="nome" name="nome" required>
         <label for="cpf">CPF</label>
-        <input type="text" id="cpf" name="cpf" required>
+        <input type="text" id="cpf" name="cpf" minlength="11" maxlength="11" required>
         <label for="senha">Senha</label>
         <input type="text" id="senha" name="senha" required>
-        <label for="privilegio"></label>
-        <input type="text" id="privilegio" name="privilegio" required>
+        <label for="privilegio">Privilégio</label>
+        <select name="privilegio" id="privilegio">
+            <option value="funcionário">funcionário</option>
+            <option value="administrador">administrador</option>
+        </select>
         <input type="reset" value="Limpar">
         <input type="submit" value="Salvar">
     </form>
 </body>
-</html>
+</html> 

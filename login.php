@@ -15,7 +15,12 @@ include("DAO_usuario.php");
                     $_SESSION['cpf'] = $row['cpf'];
                     $_SESSION['privilegio'] = $row['privilegio'];
                     $_SESSION['nome'] = $row['nome'];
-                    header("Location: home.php");
+                    //direcionar para a pagina dependendo do nivel de acesso do usuario
+                    if($_SESSION['privilegio'] == "administrador"){
+                        header("Location: home.php");
+                    }elseif($_SESSION['privilegio'] == "funcionario"){
+                        header("Location: home_funcionario.php");
+                    }
                 }
             }
         }catch(Exception $e){

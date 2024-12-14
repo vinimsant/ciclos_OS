@@ -26,7 +26,6 @@
         <nav>
             <a href="inserir_clientes.php">Clientes</a>
             <a href="">Objetos</a>
-            <a href="usuario_manager.php">Usuarios</a>
             <!-- botão sair  -->
             <a href="sair.php" id="btn_sair">Sair</a>
         </nav>

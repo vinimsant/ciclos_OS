@@ -1,0 +1,4 @@
+function excluirUsuario(usuario){
+
+}
+

@@ -1,12 +1,15 @@
 :root{
     --cor1: rgb(23, 5, 5);
     --cor2: rgb(208, 181, 6);
+    --cor_vermelho: rgb(198, 26, 26);
+    --cor_sombra: rgb(0, 0, 0);
 }
+
 
 .formulario{
     margin: 10px;
     padding: 25px;
-    box-shadow: 10px 5px 5px black ;
+    box-shadow: 10px 5px 5px var(--cor_sombra);
     border: solid 3px var(--cor2);
     border-radius: 15px;
     background-color: var(--cor1);
@@ -48,5 +51,5 @@ a:hover{
 }
 
 a:active{
-    color: rgb(249, 4, 4);
+    color: var(--cor_vermelho);
 }
