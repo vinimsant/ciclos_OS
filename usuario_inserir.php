@@ -28,7 +28,7 @@
             //verificar se o cpf já está cadastrado no banco
             $usuario_pesquisado = $dao->buscar_usuario_pelo_cpf($usuario_crud->__get_cpf());
             
-            if(count($usuario_pesquisado, 1)>0){
+            if(count($usuario_pesquisado, 1)>0){//o modo conta todos os sub arrays
                 echo "<script>alert('Já existe um usuário cadatrado com esse cpf!');</script>";
              }else{
                 $dao->Inserir_usuario($usuario_crud);

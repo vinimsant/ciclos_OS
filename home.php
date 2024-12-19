@@ -19,13 +19,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">
     <title>Ciclos OS</title>
 </head>
 <body>
     <header>
         <nav>
-            <a href="inserir_clientes.php">Clientes</a>
-            <a href="">Objetos</a>
+            <a href="clientes_manager.php">Clientes</a>
+            <a href="objetos_manager.php">Objetos</a>
             <a href="usuario_manager.php">Usuarios</a>
             <!-- botão sair  -->
             <a href="sair.php" id="btn_sair">Sair</a>
