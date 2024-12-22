@@ -34,8 +34,11 @@
         }catch(Exception $e){
             echo "Erro ao salvar usuario $e";
         }
-        
+    }
 
+    //botão cancelar
+    if(isset($_POST['cancelar'])){
+        header("Location:usuario_manager.php");
     }
 ?>
 
@@ -92,6 +95,7 @@
         ?>
         <input type="reset" value="Limpar">
         <input type="submit" value="Salvar">
+        <input type="submit" name="cancelar" value="Cancelar">
     </form>
 </body>
 </html> 

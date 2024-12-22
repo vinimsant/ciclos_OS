@@ -24,7 +24,7 @@
 <body>
     <header>
         <nav>
-            <a href="inserir_clientes.php">Clientes</a>
+            <a href="clientes_manager.php">Clientes</a>
             <a href="">Objetos</a>
             <!-- botão sair  -->
             <a href="sair.php" id="btn_sair">Sair</a>

@@ -18,7 +18,7 @@ include("DAO_usuario.php");
                     //direcionar para a pagina dependendo do nivel de acesso do usuario
                     if($_SESSION['privilegio'] == "administrador"){
                         header("Location: home.php");
-                    }elseif($_SESSION['privilegio'] == "funcionario"){
+                    }elseif($_SESSION['privilegio'] == "funcionário"){
                         header("Location: home_funcionario.php");
                     }
                 }

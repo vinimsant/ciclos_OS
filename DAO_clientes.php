@@ -30,7 +30,7 @@
 
         public function atualizar_cliente($cliente){
             try{
-                $sql = "UPDATE cliente SET nome = :nome, telefone = :telefone, whatsap = :whatsap WHERE cpf = :cpf";
+                $sql = "UPDATE clientes SET nome = :nome, telefone = :telefone, whatsap = :whatsap WHERE cpf = :cpf";
                 $stmt = $this->conn->prepare($sql);
                 $stmt->bindValue(":cpf", $cliente->__get_cpf());
                 $stmt->bindValue(":nome", $cliente->__get_nome());
@@ -45,7 +45,7 @@
 
         public function pesquisar_todos_clientes(){
             try{
-                $sql = "SELECT * FROM usuarios";
+                $sql = "SELECT * FROM clientes";
                 $stmt = $this->conn->prepare($sql);
                 $stmt->execute();
                 $dados = $stmt->fetchAll();
@@ -58,7 +58,7 @@
 
         public function buscar_cliente_pelo_cpf($cpf){
             try{
-                $sql = "SELECT * FROM usuarios WHERE cpf = :cpf";
+                $sql = "SELECT * FROM clientes WHERE cpf = :cpf";
                 $stmt = $this->conn->prepare($sql);
                 $stmt->bindValue(":cpf", $cpf);
                 $stmt->execute();
@@ -72,7 +72,7 @@
 
         public function deletar_cliente($cpf){
             try{
-                $sql = "DELETE FROM usuarios WHERE cpf = :cpf";
+                $sql = "DELETE FROM clientes WHERE cpf = :cpf";
                 //poderia ter usado bindParam também
                 // $stmt = $pdo->prepare('DELETE FROM minhaTabela WHERE id = :id');
                 // $stmt->bindParam(':id', $id);
