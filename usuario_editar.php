@@ -1,4 +1,6 @@
 <?php
+
+    include("DAO_usuario.php");
     
     //verificar se está logado
     if(!isset($_SESSION)){
@@ -16,9 +18,6 @@
     $cpf_edit = $_SESSION['cpf_editar'];
     $privilegio_edit = $_SESSION['privilegio_editar'];
     $senha_edit = $_SESSION['senha_editar'];    
-
-
-    include("DAO_usuario.php");
     
     $usuario_crud = new Usuario();
     

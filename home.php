@@ -27,7 +27,7 @@
         <nav>
             <a href="clientes_manager.php">Clientes</a>
             <a href="objetos_manager.php">Objetos</a>
-            <a href="">Serviços</a>
+            <a href="servicos_manager.php">Serviços</a>
             <a href="usuario_manager.php">Usuarios</a>
             <!-- botão sair  -->
             <a href="sair.php" id="btn_sair">Sair</a>

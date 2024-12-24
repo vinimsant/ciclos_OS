@@ -66,7 +66,7 @@
         <a href="sair.php">Sair</a>
     </nav>
     <div>
-        <h2>Cadastrar Clientes</h2>
+        <h2>Editar Cliente</h2>
         <form action="" method="post" class="formulario">
             <label for="nome">Nome</label>
             <input type="text" id="nome" name="nome" <?php echo "value='$nome_edit'";//popular o inpiut?> required>
