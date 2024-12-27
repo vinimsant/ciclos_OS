@@ -1,6 +1,6 @@
 <?php
 
-    include('DAO_usuario.php');
+    include('DAO.php');
 
     
     //verificar se está logado

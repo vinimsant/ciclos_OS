@@ -1,6 +1,6 @@
 <?php
     
-    include("DAO_servicos.php");
+    include("DAO.php");
 
     //verificar se está logado
     if(!isset($_SESSION)){

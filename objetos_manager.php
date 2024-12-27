@@ -1,5 +1,5 @@
 <?php
-    include('DAO_usuario.php');
+    include('DAO.php');
 
     
     //verificar se está logado
@@ -13,7 +13,7 @@
     //nome do usuario logado
     echo "<p class='menu_login'>Usuario logado <strong>{$_SESSION['nome']}</strong></p>";
 
-    $dao = new DAO_Usuario();
+    $dao = new DAO_objetos();
 
 ?>
 
